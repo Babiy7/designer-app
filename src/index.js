@@ -3,41 +3,26 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./containers/App";
 import * as serviceWorker from "./serviceWorker";
-import { createStore, applyMiddleware } from "redux";
-import { rootReducer } from "./store/reducer/rootReducer";
-import { Provider } from "react-redux";
+import { createStore, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
+import { Provider } from "react-redux";
+import friendList from "./store/reducers/friendList";
+import * as actions from "./store/actions/actions";
 
-let person = {
-  name: "Owen",
-  age: 23,
-  isJob: "Yes"
-};
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
-let newPerson = {};
+let store = createStore(friendList, composeEnhancers(applyMiddleware(thunk)));
 
-const poop = name => store => reducer => {
-  console.log(name);
-  console.log(store);
-  console.log(reducer);
-};
-
-// poop("Owen")("silpo")("count");
-
-// Object.entries(person).forEach(([key, name]) => {
-//   console.log(key + " " + name);
-//   newPerson[name] = key;
-// });
-
-let store = createStore(rootReducer, applyMiddleware(thunk));
+console.log(store.getState());
+store.dispatch(actions.addFriend("Oleg"));
+store.dispatch(actions.deleteFriend(1));
+store.dispatch(actions.starFriend(2));
+store.dispatch(actions.addFriend("Rostic"));
+console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
-    <App
-      counte={store.getState()}
-      store={store}
-      dispatch={action => store.dispatch(action)}
-    />
+    <App />
   </Provider>,
   document.getElementById("root")
 );
