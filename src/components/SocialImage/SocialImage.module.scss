@@ -1,0 +1,12 @@
+.Image {
+  width: 41px;
+  height: 41px;
+
+  margin: 26px 10px 0 0;
+
+  transition: transform 0.1s linear;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

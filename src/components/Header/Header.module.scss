@@ -1,21 +1,49 @@
-.header {
-  height: 100vh;
-  padding: 1.2rem 0;
-  border: red solid 1px;
+@import "../../vars.scss";
 
-  .content {
+.Header {
+  padding: 1.2rem 0;
+
+  .Content {
     width: 100%;
     max-width: 1200px;
+
     padding: 0 1rem;
     margin: 0 auto;
 
-    .header_inner {
-      border: green solid 1px;
+    .HeaderInner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       .UserContainer {
+        width: 169px;
+
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .UserName {
+          margin-bottom: 3px;
+
+          color: $black;
+
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 18px;
+        }
+
+        .UserProf {
+          color: rgba($black, 0.7);
+
+          font-size: 12px;
+        }
+      }
+
+      .Nav {
+        height: 100%;
+
+        display: flex;
+        align-items: center;
       }
     }
   }

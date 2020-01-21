@@ -2,20 +2,29 @@ import React from "react";
 import classes from "./Header.module.scss";
 
 import Avatar from "../Avatar/Avatar";
+import NavLinks from "../UI/NavLinks/NavLinks";
+import Button from "../UI/Button/Button";
 
 export const Header = props => {
   return (
-    <header className={classes.header}>
-      <div className={classes.content}>
-        <div className={classes.header_inner}>
+    <header className={classes.Header}>
+      <div className={classes.Content}>
+        <div className={classes.HeaderInner}>
           <div className={classes.UserContainer}>
             <Avatar width="57" height="57" />
             <div className={classes.UserContent}>
-              <div className={classes.UserName}></div>
-              <div className={classes.UserProf}></div>
+              <div className={classes.UserName}>
+                Lewis
+                <br />
+                Nathaniel
+              </div>
+              <div className={classes.UserProf}>UI &amp; UX Designer</div>
             </div>
           </div>
-          <nav className={classes.nav}>2</nav>
+          <nav className={classes.Nav}>
+            <NavLinks />
+            <Button>Hire me</Button>
+          </nav>
         </div>
       </div>
     </header>

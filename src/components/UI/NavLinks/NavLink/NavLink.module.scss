@@ -1,0 +1,48 @@
+@import "../../../../vars.scss";
+
+.NavLink {
+  height: 20px;
+  position: relative;
+
+  padding: 0;
+  margin-right: 15px;
+
+  color: $black;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 2px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    background-color: $black;
+
+    transition: ease-in 2s;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+
+      display: block;
+    }
+  }
+}
+
+.active {
+  &:after {
+    width: 100%;
+
+    display: block;
+  }
+}

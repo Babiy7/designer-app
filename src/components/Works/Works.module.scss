@@ -1,0 +1,35 @@
+@import "../../vars.scss";
+
+.Works {
+  .Container {
+    max-width: 1230px;
+
+    margin: 0 auto;
+    padding: 41px 0;
+
+    .Nav {
+      display: flex;
+      justify-content: center;
+
+      .Link {
+        margin-right: 20px;
+
+        color: rgba($color: $black, $alpha: 7);
+
+        font-size: 12px;
+        text-decoration: none;
+        font-family: inherit;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .Portfolios {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
