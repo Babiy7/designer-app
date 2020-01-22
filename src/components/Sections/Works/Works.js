@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Works.module.scss";
 
-import Portfolio from "../Portfolio/Portfolio";
-import Button from "../UI/Button/Button";
-import { ContentCenterHorisontal, Margin } from "../UI/Helper/Helper";
+import Portfolio from "../../Portfolio/Portfolio";
+import Button from "../../UI/Button/Button";
+import { ContentCenterHorisontal, Margin } from "../../UI/Helper/Helper";
 
 const Works = () => {
   return (

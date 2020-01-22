@@ -1,0 +1,51 @@
+@import "../../../vars.scss";
+
+.Footer {
+  margin-top: 120px;
+  padding: 16px 0;
+
+  background: $black;
+
+  .Container {
+    width: 100%;
+    max-width: 1171px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    .Credits {
+      display: flex;
+      align-items: center;
+
+      .Copyright {
+        padding-right: 15px;
+        border-right: 1.5px solid rgba($color: $gray, $alpha: 0.4);
+
+        color: $gray-light;
+
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .Social {
+        display: flex;
+        align-items: center;
+
+        .Icon {
+          width: 17px;
+          height: 17px;
+
+          margin-left: 15px;
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    .Nav {
+      color: $gray-light;
+    }
+  }
+}

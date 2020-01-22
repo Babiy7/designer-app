@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./Intro.module.scss";
 
-import SocialImage from "../SocialImage/SocialImage";
-import Button from "../UI/Button/Button";
-import { Image } from "../UI/Helper/Helper";
-import person from "../../assets/images/photo.png";
+import SocialImage from "../../SocialImage/SocialImage";
+import Button from "../../UI/Button/Button";
+import { Image } from "../../UI/Helper/Helper";
+import person from "../../../assets/images/photo.png";
 
 const Intro = () => {
   return (
@@ -26,8 +26,8 @@ const Intro = () => {
               return <SocialImage type={item} />;
             })}
           </div>
-          <Button shadow>Hire me</Button>
-          <Button shadow>See my resume</Button>
+          <Button type="shadow">Hire me</Button>
+          <Button type="shadow">See my resume</Button>
         </div>
         <div className={classes.Photo}>
           <Image src={person} alt="person" />

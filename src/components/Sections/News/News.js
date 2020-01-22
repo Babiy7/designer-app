@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./News.module.scss";
 
-import Article from "../Article/Article";
-import Button from "../UI/Button/Button";
-import { ContentCenterHorisontal } from "../UI/Helper/Helper";
+import Article from "../../Article/Article";
+import Button from "../../UI/Button/Button";
+import { ContentCenterHorisontal } from "../../UI/Helper/Helper";
 
 const News = () => {
   return (

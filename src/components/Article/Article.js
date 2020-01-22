@@ -28,7 +28,7 @@ const Article = props => {
           </div>
         </div>
         <Link to="/">
-          <Button shadow>Read more</Button>
+          <Button type="shadow">Read more</Button>
         </Link>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Review.module.scss";
 
-import { ContentCenterVertical } from "../UI/Helper/Helper";
-import Star from "../../assets/svg/star-solid.svg";
-import StarHalf from "../../assets/svg/star-half-solid.svg";
+import { ContentCenterVertical } from "../../UI/Helper/Helper";
+import Star from "../../../assets/svg/star-solid.svg";
+import StarHalf from "../../../assets/svg/star-half-solid.svg";
 
 const Review = () => {
   return (

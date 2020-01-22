@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./AboutMe.module.scss";
 
-import { Image } from "../UI/Helper/Helper";
-import Button from "../UI/Button/Button";
-import photo from "../../assets/images/designer_photo.png";
+import { Image } from "../../UI/Helper/Helper";
+import Button from "../../UI/Button/Button";
+import photo from "../../../assets/images/designer_photo.png";
 
 const AboutMe = () => {
   return (
@@ -35,8 +35,8 @@ const AboutMe = () => {
               voluptatem repellat minus aut laboriosam blanditiis!
             </p>
           </div>
-          <Button shadow>Hire me</Button>
-          <Button shadow>See my resume</Button>
+          <Button type="shadow">Hire me</Button>
+          <Button type="shadow">See my resume</Button>
         </div>
       </div>
     </div>

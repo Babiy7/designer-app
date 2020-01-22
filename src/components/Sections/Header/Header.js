@@ -1,11 +1,11 @@
 import React from "react";
 import classes from "./Header.module.scss";
 
-import Avatar from "../Avatar/Avatar";
-import NavLinks from "../UI/NavLinks/NavLinks";
-import Button from "../UI/Button/Button";
+import Avatar from "../../Avatar/Avatar";
+import NavLinks from "../../UI/NavLinks/NavLinks";
+import Button from "../../UI/Button/Button";
 
-export const Header = props => {
+const Header = props => {
   return (
     <header className={classes.Header}>
       <div className={classes.Content}>
@@ -30,3 +30,5 @@ export const Header = props => {
     </header>
   );
 };
+
+export default Header;
