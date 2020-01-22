@@ -1,0 +1,82 @@
+@import "../../vars.scss";
+
+.Article {
+  width: 33.33333%;
+
+  padding: 0 15px;
+  margin-bottom: 50px;
+
+  .Item {
+    color: $black;
+
+    .Header {
+      position: relative;
+
+      .Date {
+        width: 80px;
+        height: 80px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: $black;
+        color: $white;
+
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+      }
+
+      .Photo {
+        height: 257px;
+
+        margin-bottom: 15px;
+
+        background: $gray;
+      }
+    }
+
+    .Content {
+      color: $black;
+
+      .Title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        text-transform: uppercase;
+
+        a {
+          color: inherit;
+
+          text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .Category {
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .Text {
+        margin-top: 20px;
+
+        color: $gray;
+
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 24px;
+      }
+    }
+  }
+}

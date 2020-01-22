@@ -6,6 +6,7 @@ import Intro from "../components/Intro/Intro";
 import Works from "../components/Works/Works";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Review from "../components/Review/Review";
+import News from "../components/News/News";
 
 function App(props) {
   console.log("App render");
@@ -17,6 +18,7 @@ function App(props) {
       <Works />
       <AboutMe />
       <Review />
+      <News />
     </div>
   );
 }

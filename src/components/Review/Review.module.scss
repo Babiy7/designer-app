@@ -51,7 +51,7 @@
       }
 
       .Company {
-        margin-top: 7px;
+        margin: 7px 0 7px 0;
 
         color: $gray;
 
@@ -59,12 +59,11 @@
         font-style: italic;
         font-weight: 300;
       }
-      .Star {
-        height: 17px;
 
-        margin-top: 7px;
-
-        color: $black;
+      .Rating {
+        .Star {
+          margin-left: 5px;
+        }
       }
     }
   }

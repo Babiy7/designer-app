@@ -30,9 +30,21 @@ const Review = () => {
             <div className={classes.Company}>Marketing House</div>
             <div className={classes.Rating}>
               {[1, 2, 3, 4].map(() => (
-                <img src={Star} alt="star" className={classes.Star} />
+                <img
+                  src={Star}
+                  alt="star"
+                  width="13"
+                  height="13"
+                  className={classes.Star}
+                />
               ))}
-              <img src={StarHalf} alt="star" className={classes.Star} />
+              <img
+                src={StarHalf}
+                alt="star"
+                width="13"
+                height="13"
+                className={classes.Star}
+              />
             </div>
           </div>
         </ContentCenterVertical>
