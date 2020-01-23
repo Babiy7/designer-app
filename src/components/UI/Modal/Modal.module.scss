@@ -1,0 +1,29 @@
+@import "../../../vars.scss";
+
+.Modal {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  background-color: $white;
+
+  z-index: 500;
+
+  .Close {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 solid $black;
+    border-radius: 50%;
+
+    background-color: $black;
+  }
+}
