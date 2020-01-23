@@ -1,0 +1,43 @@
+@import "../../../vars.scss";
+
+.Intro {
+  .Container {
+    width: 1200px;
+    max-width: 1200px;
+    height: 496px;
+
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba($gray, 0.3);
+    background: url("../../../assets/images/symbols.png") right bottom no-repeat;
+
+    .Content {
+      width: 50%;
+
+      margin-top: 103px;
+
+      .Subtitle {
+        font-size: 32px;
+        color: $black;
+        font-weight: 200;
+      }
+
+      .Title {
+        font-size: 42px;
+        color: $black;
+        font-weight: bold;
+      }
+
+      .Text {
+        font-size: 18px;
+        color: rgba($black, 0.7);
+      }
+    }
+
+    .Photo {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

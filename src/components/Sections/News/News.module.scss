@@ -1,0 +1,40 @@
+@import "../../../vars.scss";
+
+.News {
+  margin-top: 220px;
+
+  .Container {
+    width: 100%;
+    max-width: 1171px;
+
+    margin: 0 auto;
+
+    .Header {
+      margin-bottom: 55px;
+
+      text-align: center;
+
+      .Title {
+        color: $black;
+
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 45px;
+        text-transform: uppercase;
+      }
+
+      .Text {
+        color: $gray-light;
+
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 45px;
+      }
+    }
+
+    .Articles {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

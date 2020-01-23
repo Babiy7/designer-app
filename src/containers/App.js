@@ -1,10 +1,14 @@
 import React from "react";
-import { Header } from "../components/Header/Header";
+import { Route } from "react-router-dom";
+
+import Sections from "../components/Sections/Sections";
 
 function App() {
+  console.log("App render");
+
   return (
     <div className="App">
-      <Header />
+      <Route exact path="/" component={Sections} />
     </div>
   );
 }
