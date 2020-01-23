@@ -3,8 +3,8 @@ import MNavLink from "./NavLink/NavLink";
 
 const NavLinks = props => {
   return [
-    { title: "work", link: "/", active: true },
-    { title: "about me", link: "/", active: false },
+    { title: "work", link: "#works", active: true },
+    { title: "about me", link: "#about-me", active: false },
     { title: "blog", link: "/", active: false },
     { title: "contact", link: "/", active: false }
   ].map(item => {

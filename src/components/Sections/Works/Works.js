@@ -7,7 +7,7 @@ import { ContentCenterHorisontal, Margin } from "../../UI/Helper/Helper";
 
 const Works = () => {
   return (
-    <div className={classes.Works}>
+    <div id="works" className={classes.Works}>
       <div className={classes.Container}>
         <div className={classes.Nav}>
           {[

@@ -7,7 +7,7 @@ import photo from "../../../assets/images/designer_photo.png";
 
 const AboutMe = () => {
   return (
-    <div className={classes.AboutMe}>
+    <section id="about-me" className={classes.AboutMe}>
       <div className={classes.Container}>
         <div className={classes.Image}>
           <Image src={photo} alt="photo" />
@@ -39,7 +39,7 @@ const AboutMe = () => {
           <Button type="shadow">See my resume</Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
