@@ -73,7 +73,7 @@ const News = () => {
           })}
         </div>
         <ContentCenterHorisontal>
-          <Button>See more posts</Button>
+          <Button type="normal">See more posts</Button>
         </ContentCenterHorisontal>
       </div>
     </section>

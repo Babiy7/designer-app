@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./ModalProject.module.scss";
 
+import Button from "../../UI/Button/Button";
+
 const ModalProject = () => {
   return (
     <div className={classes.ModalProject}>
@@ -33,9 +35,18 @@ const ModalProject = () => {
               nesciunt perferendis. Nulla reiciendis, velit officia beatae
               molestiae ratione vitae commodi architecto.
             </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              veniam fuga commodi inventore laudantium sapiente sed aut eaque
+              nesciunt perferendis. Nulla reiciendis, velit officia beatae
+              molestiae ratione vitae commodi architecto.
+            </p>
           </div>
         </div>
-        <div className={classes.Buttons}></div>
+        <div className={classes.Buttons}>
+          <Button type="previous">Previous</Button>
+          <Button type="next">Next</Button>
+        </div>
       </div>
     </div>
   );

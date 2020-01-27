@@ -1,18 +1,22 @@
 @import "../../../vars.scss";
 
 .ModalProject {
-  height: 600px;
+  height: 770px;
 
   display: flex;
 
   .Left {
     width: 65%;
 
+    position: relative;
+
     background-color: $gray;
   }
 
   .Right {
     width: 35%;
+
+    position: relative;
 
     .Content {
       padding: 50px 0 11px 27px;
@@ -49,7 +53,7 @@
             bottom: -6px;
             right: 0;
 
-            background-color: $black;
+            background-color: rgba($gray, 0.7);
           }
         }
 
@@ -87,6 +91,15 @@
     }
 
     .Buttons {
+      width: 100%;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      display: flex;
+      justify-content: space-between;
+      padding: 21px 11px;
     }
   }
 }

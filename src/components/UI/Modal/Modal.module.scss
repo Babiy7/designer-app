@@ -25,5 +25,11 @@
     border-radius: 50%;
 
     background-color: $black;
+
+    transition: transform 0.22s linear;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
   }
 }

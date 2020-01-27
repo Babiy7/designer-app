@@ -28,7 +28,7 @@ const Works = () => {
         </div>
         <ContentCenterHorisontal>
           <Margin top="35">
-            <Button>Load more work</Button>
+            <Button type="normal">Load more work</Button>
           </Margin>
         </ContentCenterHorisontal>
       </div>
