@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Modal.module.scss";
 
 import Backdrop from "../Backdrop/Backdrop";
-import closeIcon from "../../../assets/svg/close.svg";
+import ButtonClose from "../ButtonClose/ButtonClose";
 
 const Modal = props => (
   <>
@@ -15,9 +15,7 @@ const Modal = props => (
         }}
       >
         {props.children}
-        <div className={classes.Close}>
-          <img src={closeIcon} alt="close" height="15" width="15" />
-        </div>
+        <ButtonClose />
       </div>
     </Backdrop>
   </>
