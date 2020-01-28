@@ -1,0 +1,12 @@
+@import "../../../vars.scss";
+
+.Modal {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  background-color: $white;
+
+  z-index: 500;
+}

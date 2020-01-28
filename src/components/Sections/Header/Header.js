@@ -23,7 +23,7 @@ const Header = props => {
           </div>
           <nav className={classes.Nav}>
             <NavLinks />
-            <Button>Hire me</Button>
+            <Button type="normal">Hire me</Button>
           </nav>
         </div>
       </div>

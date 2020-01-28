@@ -6,15 +6,23 @@ function Button(props) {
 
   switch (props.type) {
     case "normal": {
-      classButton = classes.Button;
+      classButton = [classes.Button, classes.Normal].join(" ");
       break;
     }
     case "shadow": {
-      classButton = classes.ButtonShadow;
+      classButton = [classes.Button, classes.Shadow].join(" ");
       break;
     }
     case "gray": {
-      classButton = classes.ButtonGray;
+      classButton = [classes.Button, classes.Gray].join(" ");
+      break;
+    }
+    case "previous": {
+      classButton = [classes.ButtonMove, classes.Previous].join(" ");
+      break;
+    }
+    case "next": {
+      classButton = [classes.ButtonMove, classes.Next].join(" ");
       break;
     }
     default: {
