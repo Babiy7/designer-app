@@ -2,8 +2,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import Sections from "../components/Sections/Sections";
-import Modal from "../components/UI/Modal/Modal";
 import ModalProject from "../components/Modals/ModalProject/ModalProject";
+import ModalResume from "../components/Modals/ModalResume/ModalResume";
 
 function App() {
   console.log("App render");
@@ -11,9 +11,8 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/" component={Sections} />
-      <Modal show>
-        <ModalProject />
-      </Modal>
+      <ModalProject />
+      <ModalResume show={true} />
     </div>
   );
 }
