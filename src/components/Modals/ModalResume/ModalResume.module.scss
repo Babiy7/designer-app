@@ -2,14 +2,13 @@
 
 .ModalResume {
   width: 100%;
-  width: 1200px;
 
   position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 79px 216px;
+  padding: 79px 20px;
 
   background: $white;
 
@@ -31,11 +30,13 @@
   }
 
   .Timeline {
+    border: red solid;
     width: 768px;
 
     display: flex;
 
     .Experience {
+      border: green solid;
       width: 384px;
 
       padding-right: 47px;
@@ -43,15 +44,17 @@
       border-right: 1px solid $gray-light;
 
       text-align: right;
+
+      .Items {
+      }
     }
 
     .Education {
+      width: 300px;
     }
 
     .TimelineTitle {
       color: $black;
-
-      margin-bottom: 38px;
 
       font-size: 18px;
       font-weight: 700;

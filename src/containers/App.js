@@ -1,4 +1,6 @@
 import React from "react";
+import classes from "./App.module.scss";
+
 import { Route } from "react-router-dom";
 
 import Sections from "../components/Sections/Sections";
@@ -13,6 +15,13 @@ function App() {
       <Route exact path="/" component={Sections} />
       <ModalProject />
       <ModalResume show={true} />
+      {/* <div>
+        <p className={classes.paragraph}>Owen</p>
+        <p className={classes.paragraph}>Owen</p>
+        <p className={classes.paragraph}>Owen</p>
+        <p className={classes.paragraph}>Owen</p>
+        <p className={classes.paragraph}>Owen</p>
+      </div> */}
     </div>
   );
 }

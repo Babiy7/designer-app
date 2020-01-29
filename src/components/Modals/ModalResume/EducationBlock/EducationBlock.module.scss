@@ -3,6 +3,14 @@
 .Item {
   color: $black;
 
+  &:first-child {
+    margin-top: 38px;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
   .Date {
     margin-bottom: 12px;
 
