@@ -12,7 +12,7 @@ const Section = () => {
   return (
     <>
       <Header />
-      <Intro />
+      {/* <Intro /> */}
       <Works />
       <AboutMe />
       <Review />

@@ -16,6 +16,7 @@ export const Image = props => {
 };
 
 export const Margin = props => {
+  console.log(props.bottom);
   return (
     <div
       style={{

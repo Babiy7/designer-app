@@ -1,0 +1,39 @@
+@import "../../../vars.scss";
+
+.ProgressBar {
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    margin-top: 28px;
+  }
+
+  &:last-child {
+    margin-bottom: 28px;
+  }
+
+  .Title {
+    width: 95px;
+
+    margin-right: 19px;
+
+    color: $black;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  .Container {
+    width: 130px;
+    height: 6px;
+
+    background: #c3bdbd;
+
+    .Progress {
+      height: 6px;
+
+      background: $gray;
+    }
+  }
+}
