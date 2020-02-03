@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./AboutMe.module.scss";
 
-import { Image } from "../../UI/Helper/Helper";
+import { Image, Margin } from "../../UI/Helper/Helper";
 import Button from "../../UI/Button/Button";
 import photo from "../../../assets/images/designer_photo.png";
 
@@ -35,8 +35,13 @@ const AboutMe = () => {
               voluptatem repellat minus aut laboriosam blanditiis!
             </p>
           </div>
-          <Button type="shadow">Hire me</Button>
-          <Button type="shadow">See my resume</Button>
+
+          <div className={classes.Buttons}>
+            <Margin right="15">
+              <Button type="shadow">Hire me</Button>
+            </Margin>
+            <Button type="shadow">See my resume</Button>
+          </div>
         </div>
       </div>
     </section>

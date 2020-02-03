@@ -9,15 +9,19 @@ const ModalProject = props => {
     <Modal show={props.show}>
       <div className={classes.ModalProject}>
         <div className={classes.Left}></div>
+
         <div className={classes.Right}>
           <div className={classes.Content}>
             <h2 className={classes.Title}>PROJECT TITLE</h2>
+
             <div className={classes.SubTitle}>
               <div className={classes.Category}>CATEGORY</div>
               <div className={classes.Date}>2018</div>
             </div>
+
             <h4 className={classes.ClientTitle}>Client: </h4>
             <div className={classes.ClientSubTitle}>Creative Agency</div>
+
             <div className={classes.Text}>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
@@ -45,6 +49,7 @@ const ModalProject = props => {
               </p>
             </div>
           </div>
+
           <div className={classes.Buttons}>
             <Button type="previous">Previous</Button>
             <Button type="next">Next</Button>

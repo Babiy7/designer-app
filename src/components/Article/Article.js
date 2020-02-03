@@ -4,6 +4,7 @@ import classes from "./Article.module.scss";
 import { Link } from "react-router-dom";
 
 import Button from "../UI/Button/Button";
+import { Margin } from "../UI/Helper/Helper";
 
 const Article = props => {
   return (
@@ -28,7 +29,9 @@ const Article = props => {
           </div>
         </div>
         <Link to="/">
-          <Button type="shadow">Read more</Button>
+          <Margin top="42" right="15">
+            <Button type="shadow">Read more</Button>
+          </Margin>
         </Link>
       </div>
     </div>
