@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Route exact path="/" component={Sections} />
       <ModalProject />
-      <ModalResume show={true} />
+      {/* <ModalResume show={true} /> */}
       {/* <div>
         <p className={classes.paragraph}>Owen</p>
         <p className={classes.paragraph}>Owen</p>
