@@ -1,29 +1,11 @@
-@import "../../../vars.scss";
+@import "../../../vars";
+@import "../../../button";
 
-.Button {
-  margin: 0;
-  padding: 10px 30px;
-  border-radius: 50px;
-  outline: none;
+.ButtonNormal {
+  @extend %button-shared;
 
-  background: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-decoration: none;
-
-  cursor: pointer;
-
-  &:hover {
-    outline: none;
-
-    background-color: $black;
-    color: $white;
-  }
-}
-
-.Normal {
   border: 2px solid $black;
-  padding: 13px 50px;
+  padding: 11px 40px;
 
   color: $black;
   background-color: none;
@@ -32,7 +14,9 @@
   transition: background-color linear 0.2s;
 }
 
-.Shadow {
+.ButtonShadow {
+  @extend %button-shared;
+
   display: inline-block;
 
   border: 0.7px solid $black;
@@ -48,7 +32,9 @@
   }
 }
 
-.Gray {
+.ButtonGray {
+  @extend %button-shared;
+
   width: 146px;
 
   padding: 11px 0;
@@ -65,28 +51,17 @@
   }
 }
 
-.ButtonMove {
-  padding: 0;
+.ButtonPrevious {
+  @extend %button-switch-shared;
 
-  outline: none;
-  border: none;
-
-  color: $black;
-  background: none;
-
-  font-size: 14px;
-  line-height: 22px;
-
-  cursor: pointer;
-}
-
-.Previous {
   padding-left: 25px;
 
   background: url("../../../assets//svg/back.svg") left no-repeat;
 }
 
-.Next {
+.ButtonNext {
+  @extend %button-switch-shared;
+
   padding-right: 25px;
 
   background: url("../../../assets//svg/chevron.svg") right no-repeat;

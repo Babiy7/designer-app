@@ -3,7 +3,7 @@ import classes from "./Intro.module.scss";
 
 import SocialImage from "../../SocialImage/SocialImage";
 import Button from "../../UI/Button/Button";
-import { Image } from "../../UI/Helper/Helper";
+import { Image, Margin } from "../../UI/Helper/Helper";
 import person from "../../../assets/images/photo.png";
 
 const Intro = () => {
@@ -26,8 +26,13 @@ const Intro = () => {
               return <SocialImage type={item} />;
             })}
           </div>
-          <Button type="shadow">Hire me</Button>
-          <Button type="shadow">See my resume</Button>
+
+          <div className={classes.Buttons}>
+            <Margin right="15">
+              <Button type="shadow">Hire me</Button>
+            </Margin>
+            <Button type="shadow">See my resume</Button>
+          </div>
         </div>
         <div className={classes.Photo}>
           <Image src={person} alt="person" />
