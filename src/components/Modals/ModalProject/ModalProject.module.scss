@@ -1,4 +1,5 @@
 @import "../../../vars.scss";
+@import "../../../mixins.scss";
 
 .ModalProject {
   max-width: 1200px;
@@ -23,9 +24,7 @@
       .Title {
         color: $black;
 
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 45px;
+        @include fontBase(32px, 700, 45px);
       }
 
       .SubTitle {
@@ -33,8 +32,7 @@
 
         color: $gray;
 
-        font-size: 18px;
-        line-height: 30px;
+        @include fontBase(18px, 300, 30px);
 
         .Category {
           height: 17px;
@@ -66,16 +64,13 @@
 
         color: $black;
 
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 22px;
+        @include fontBase(16px, 700, 22px);
       }
 
       .ClientSubTitle {
         color: $gray;
 
-        font-size: 14px;
-        line-height: 22px;
+        @include fontBase(14px, 300, 22px);
       }
 
       .Text {
@@ -83,9 +78,7 @@
 
         color: $gray;
 
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 24px;
+        @include fontBase(12px, 300, 24px);
       }
     }
 

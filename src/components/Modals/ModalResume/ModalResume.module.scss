@@ -1,4 +1,5 @@
 @import "../../../vars.scss";
+@import "../../../mixins.scss";
 
 .ModalResume {
   width: 100%;
@@ -18,9 +19,7 @@
 
     color: $black;
 
-    font-size: 45px;
-    font-weight: 700;
-    line-height: 53px;
+    @include fontBase(45px, 700, 53px);
     text-align: center;
   }
 
@@ -57,9 +56,7 @@
     .TimelineTitle {
       color: $black;
 
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 25px;
+      @include fontBase(18px, 700, 25px);
       text-transform: uppercase;
     }
   }

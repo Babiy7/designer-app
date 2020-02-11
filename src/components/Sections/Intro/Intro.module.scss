@@ -1,4 +1,5 @@
 @import "../../../vars.scss";
+@import "../../../mixins.scss";
 
 .Intro {
   .Container {
@@ -22,15 +23,13 @@
       .Subtitle {
         color: $black;
 
-        font-size: 32px;
-        font-weight: 200;
+        @include fontBase(32px, 200, 53px);
       }
 
       .Title {
         color: $black;
 
-        font-size: 42px;
-        font-weight: bold;
+        @include fontBase(42px, 700, 53px);
       }
 
       .Text {

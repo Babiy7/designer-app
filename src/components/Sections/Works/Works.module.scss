@@ -1,4 +1,4 @@
-@import "../../../vars.scss";
+@import "../../../vars";
 
 .Nav {
   display: flex;
@@ -7,7 +7,7 @@
   .Link {
     margin-right: 20px;
 
-    color: rgba($color: $black, $alpha: 7);
+    color: rgba($black, 7);
 
     font-size: 12px;
     text-decoration: none;
