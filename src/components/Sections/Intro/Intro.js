@@ -11,6 +11,7 @@ import ModalCall from "../../Modals/ModalCall/ModalCall";
 const Intro = () => {
   const [showResume, setShowResume] = useState(false);
   const [showCall, setShowCall] = useState(false);
+  let body = document.getElementsByTagName("body")[0];
 
   return (
     <>
@@ -38,12 +39,24 @@ const Intro = () => {
 
             <div className={classes.Buttons}>
               <Margin right="15">
-                <Button type="shadow" onClick={() => setShowResume(true)}>
+                <Button
+                  type="shadow"
+                  onClick={() => {
+                    body.style.overflow = "hidden";
+                    setShowCall(true);
+                  }}
+                >
                   Hire me
                 </Button>
               </Margin>
 
-              <Button type="shadow" onClick={() => setShowCall(true)}>
+              <Button
+                type="shadow"
+                onClick={() => {
+                  body.style.overflow = "hidden";
+                  setShowResume(true);
+                }}
+              >
                 See my resume
               </Button>
             </div>
@@ -54,8 +67,20 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <ModalResume show={showResume} unShow={() => setShowCall(false)} />
-      <ModalCall show={showCall} unShow={() => setShowResume(false)} />
+      <ModalResume
+        show={showResume}
+        unShow={() => {
+          body.style.overflow = "auto";
+          setShowResume(false);
+        }}
+      />
+      <ModalCall
+        show={showCall}
+        unShow={() => {
+          body.style.overflow = "auto";
+          setShowCall(false);
+        }}
+      />
     </>
   );
 };

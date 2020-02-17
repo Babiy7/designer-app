@@ -6,10 +6,12 @@
   background-color: $white;
 
   z-index: 2000;
+  overflow: auto;
 }
 
 .Large {
   width: 1200px;
+  height: 95vh;
 }
 
 .Small {
