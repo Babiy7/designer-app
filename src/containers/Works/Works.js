@@ -10,23 +10,20 @@ import {
 } from "../../components/UI/Helper/Helper";
 
 class Works extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      category: "",
-      portfolios: [
-        { category: "App" },
-        { category: "Websites" },
-        { category: "Interactions" },
-        { category: "App" },
-        { category: "Websites" },
-        { category: "App" },
-        { category: "App" },
-        { category: "Interactions" },
-        { category: "Interactions" }
-      ]
-    };
-  }
+  state = {
+    category: "",
+    portfolios: [
+      { category: "App" },
+      { category: "Websites" },
+      { category: "Interactions" },
+      { category: "App" },
+      { category: "Websites" },
+      { category: "App" },
+      { category: "App" },
+      { category: "Interactions" },
+      { category: "Interactions" }
+    ]
+  };
 
   handleCategory = category => {
     this.setState({ category: category });
@@ -39,10 +36,9 @@ class Works extends React.Component {
       } else {
         if (this.state.category) {
           return portfolio.category === this.state.category;
-        } else {
-          return true;
         }
       }
+      return false;
     });
 
     return (

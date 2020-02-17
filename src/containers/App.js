@@ -1,7 +1,7 @@
 import React from "react";
 
 // import ModalProject from "../components/Modals/ModalProject/ModalProject";
-// import ModalResume from "../components/Modals/ModalResume/ModalResume";
+import ModalResume from "../components/Modals/ModalResume/ModalResume";
 // import ModalCall from "../components/Modals/ModalCall/ModalCall";
 import Header from "../components/Sections/Header/Header";
 import Intro from "../components/Sections/Intro/Intro";
@@ -23,9 +23,6 @@ function App() {
       <Review />
       <News />
       <Footer />
-      {/* <ModalProject show={true} /> */}
-      {/* <ModalCall show={true} /> */}
-      {/* <ModalResume show={true} /> */}
     </div>
   );
 }

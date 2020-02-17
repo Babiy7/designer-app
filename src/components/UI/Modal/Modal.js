@@ -20,6 +20,7 @@ const Modal = props => {
         style={{
           width: `${props.width}px`,
           transform: props.show ? "translateY(0)" : "translateY(-100vh)",
+          transition: "transform 1s linear",
           opacity: props.show ? "1" : "0"
         }}
       >

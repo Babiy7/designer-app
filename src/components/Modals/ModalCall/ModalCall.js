@@ -8,7 +8,7 @@ import email from "../../../assets/svg/email.svg";
 
 const ModalCall = props => {
   return (
-    <Modal show={props.show} size="sm">
+    <Modal show={props.show} size="sm" unShow={props.unShow}>
       <div className={classes.ModalCall}>
         <div className={classes.Left}>
           <h3 className={classes.Title}>Let's Talk!</h3>

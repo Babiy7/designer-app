@@ -10,7 +10,7 @@ import ProgressBar from "../../UI/ProgressBar/ProgressBar";
 
 const ModalResume = props => {
   return (
-    <Modal width="1200" show={props.show}>
+    <Modal width="lg" show={props.show} unShow={props.unShow}>
       <div className={classes.ModalResume}>
         <h2 className={classes.Title}>Resume</h2>
 
@@ -37,16 +37,6 @@ const ModalResume = props => {
                   agency: "The Best Agency",
                   position: "Art Director"
                 }
-                // {
-                //   date: "2014 - 2016",
-                //   agency: "Better Agency",
-                //   position: "Seniour UI/UX Designer"
-                // },
-                // {
-                //   date: "2012 - 2014",
-                //   agency: "Good Agency",
-                //   position: "UI/UX Designer"
-                // }
               ].map(item => {
                 return (
                   <ExperienceBlock
