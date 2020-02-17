@@ -38,7 +38,7 @@ class Works extends React.Component {
           return portfolio.category === this.state.category;
         }
       }
-      return false;
+      return true;
     });
 
     return (
