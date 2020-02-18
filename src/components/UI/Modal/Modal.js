@@ -14,20 +14,22 @@ const Modal = props => {
   }
 
   return (
-    <Backdrop show={props.show} unShow={props.unShow}>
+    <>
+      <Backdrop show={props.show} unShow={props.unShow} />
       <div
         className={modal}
         style={{
           width: `${props.width}px`,
-          transform: props.show ? "translateY(0)" : "translateY(-100vh)",
-          transition: "transform 1s linear",
-          opacity: props.show ? "1" : "0"
+          transform: props.show
+            ? "translate(-50%, -50%)"
+            : "translateY(-100vh)",
+          display: props.show ? "block" : "none"
         }}
       >
         {props.children}
         <ButtonClose />
       </div>
-    </Backdrop>
+    </>
   );
 };
 
