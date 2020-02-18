@@ -12,7 +12,7 @@
   align-items: center;
   padding: 79px 20px;
 
-  background: $white;
+  background: white;
 
   .Title {
     margin-bottom: 54px;
@@ -30,13 +30,11 @@
   }
 
   .Timeline {
-    border: red solid;
     width: 768px;
 
     display: flex;
 
     .Experience {
-      border: green solid;
       width: 384px;
 
       padding-right: 47px;

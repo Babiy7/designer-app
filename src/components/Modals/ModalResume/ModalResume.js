@@ -10,7 +10,7 @@ import ProgressBar from "../../UI/ProgressBar/ProgressBar";
 
 const ModalResume = props => {
   return (
-    <Modal width="lg" show={props.show} unShow={props.unShow}>
+    <Modal size="lg" show={props.show} unShow={props.unShow}>
       <div className={classes.ModalResume}>
         <h2 className={classes.Title}>Resume</h2>
 
@@ -112,7 +112,9 @@ const ModalResume = props => {
           </section>
         </div>
 
-        <Button type="shadow">Hire me</Button>
+        <Margin top="30">
+          <Button type="shadow">Hire me</Button>
+        </Margin>
       </div>
     </Modal>
   );

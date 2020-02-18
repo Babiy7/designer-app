@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import classes from "./App.module.scss";
 
-// import ModalProject from "../components/Modals/ModalProject/ModalProject";
+import ModalProject from "../components/Modals/ModalProject/ModalProject";
 import ModalResume from "../components/Modals/ModalResume/ModalResume";
-// import ModalCall from "../components/Modals/ModalCall/ModalCall";
+import ModalCall from "../components/Modals/ModalCall/ModalCall";
 import Header from "../components/Sections/Header/Header";
 import Intro from "../components/Sections/Intro/Intro";
 import Works from "./Works/Works";
@@ -15,7 +16,7 @@ function App() {
   console.log("App render");
 
   return (
-    <div className="App">
+    <div className={classes.App}>
       <Header />
       <Intro />
       <Works />
@@ -23,6 +24,10 @@ function App() {
       <Review />
       <News />
       <Footer />
+
+      <ModalResume show={false} />
+      <ModalProject show={false} />
+      <ModalCall show={false} />
     </div>
   );
 }

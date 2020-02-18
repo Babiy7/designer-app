@@ -1,17 +1,3 @@
-@import "./../vars";
-
-.paragraph {
-  border: red solid;
-}
-
-.paragraph:first-child {
-  border: yellow solid;
-}
-
-.paragraph:last-child {
-  border: black solid;
-}
-
-.paragraph:nth-child(3) {
-  border: blue solid;
+.App {
+  position: relative;
 }
