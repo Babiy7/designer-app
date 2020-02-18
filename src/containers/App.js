@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./App.module.scss";
 
 import ModalProject from "../components/Modals/ModalProject/ModalProject";
@@ -26,7 +26,7 @@ function App() {
       <Footer />
 
       <ModalResume show={false} />
-      <ModalProject show={false} />
+      <ModalProject show={true} />
       <ModalCall show={false} />
     </div>
   );

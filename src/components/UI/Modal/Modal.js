@@ -9,6 +9,8 @@ const Modal = props => {
 
   if (props.size === "lg") {
     modal = [classes.Modal, classes.Large].join(" ");
+  } else if (props.size === "md") {
+    modal = [classes.Modal, classes.Middle].join(" ");
   } else {
     modal = [classes.Modal, classes.Small].join(" ");
   }
@@ -23,7 +25,8 @@ const Modal = props => {
           transform: props.show
             ? "translate(-50%, -50%)"
             : "translateY(-100vh)",
-          display: props.show ? "block" : "none"
+          display: props.show ? "block" : "none",
+          overflow: props.overflow ? "auto" : "hidden"
         }}
       >
         {props.children}
