@@ -1,3 +1,4 @@
+//color
 $black: #2b2a2c;
 $gray: #6a696b;
 $gray-light: #8d8d8e;
@@ -5,7 +6,10 @@ $white: #efefef;
 $review-bg: #332f30;
 $input-focus-color: #00d3c8;
 
-$tablet: "max-width: 991px";
-$tablet-small: "max-width: 767px";
-$mobile-large: "max-width: 415px";
-$mobile: "max-width: 361px";
+//responsive
+$tablet-large: "max-width: 1366px";
+$tablet: "max-width: 1024px";
+$tablet-small: "max-width: 768px";
+$mobile-large: "max-width: 414px";
+$mobile: "max-width: 360px";
+$mobile-small: "max-width: 320px";

@@ -44,7 +44,7 @@
         display: flex;
         align-items: center;
 
-        @media ($tablet-small) {
+        @media ($mobile-large) {
           display: none;
         }
       }
@@ -75,7 +75,7 @@
           background: black;
         }
 
-        @media ($tablet-small) {
+        @media ($mobile-large) {
           display: flex;
         }
       }
