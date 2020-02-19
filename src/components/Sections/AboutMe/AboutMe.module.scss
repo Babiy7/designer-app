@@ -6,7 +6,7 @@
 
   padding: 90px 0 30px 0;
 
-  @media ($tablet) {
+  @media ($laptop) {
     padding: 20px 15px;
   }
 
@@ -40,11 +40,11 @@
         z-index: -1;
       }
 
-      @media ($tablet) {
+      @media ($laptop) {
         height: 550px;
       }
 
-      @media ($tablet-small) {
+      @media ($tablet) {
         transform: translateY(40px);
 
         &:before {
@@ -57,11 +57,11 @@
         position: absolute;
         bottom: 0;
 
-        @media ($tablet) {
+        @media ($laptop) {
           height: 500px;
         }
 
-        @media ($tablet-small) {
+        @media ($tablet) {
           height: 450px;
         }
       }
@@ -77,11 +77,11 @@
 
         @include fontBase(45px, 700, 40px);
 
-        @media ($tablet) {
+        @media ($laptop) {
           @include fontBase(35px, 700, 30px);
         }
 
-        @media ($tablet-small) {
+        @media ($tablet) {
           @include fontBase(25px, 700, 20px);
         }
       }
@@ -96,11 +96,11 @@
 
         @include fontBase(92px, 700, 1.1);
 
-        @media ($tablet) {
+        @media ($laptop) {
           @include fontBase(82px, 700, 80px);
         }
 
-        @media ($tablet-small) {
+        @media ($tablet) {
           @include fontBase(62px, 700, 70px);
         }
       }
@@ -117,7 +117,7 @@
 
       margin-top: 45px;
 
-      @media ($tablet-small) {
+      @media ($tablet) {
         width: 335px;
 
         position: absolute;
