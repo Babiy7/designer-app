@@ -1,7 +1,6 @@
 @import "../../../vars.scss";
 
 .Modal {
-  border: red solid;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -25,4 +24,10 @@
   width: 100%;
   max-width: 900px;
   height: 676px;
+}
+
+.Middle {
+  width: 100%;
+  max-width: 900px;
+  height: 770px;
 }
