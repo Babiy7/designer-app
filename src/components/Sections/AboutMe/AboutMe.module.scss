@@ -2,7 +2,13 @@
 @import "../../../mixins";
 
 .AboutMe {
+  position: relative;
+
   padding: 90px 0 30px 0;
+
+  @media ($tablet) {
+    padding: 20px 15px;
+  }
 
   .Container {
     max-width: 1084px;
@@ -10,7 +16,7 @@
     display: flex;
     margin: 0 auto;
 
-    .Image {
+    .ImageContainer {
       position: relative;
 
       width: 50%;
@@ -33,6 +39,32 @@
 
         z-index: -1;
       }
+
+      @media ($tablet) {
+        height: 550px;
+      }
+
+      @media ($tablet-small) {
+        transform: translateY(40px);
+
+        &:before {
+          width: 310px;
+          height: 310px;
+        }
+      }
+
+      .Image {
+        position: absolute;
+        bottom: 0;
+
+        @media ($tablet) {
+          height: 500px;
+        }
+
+        @media ($tablet-small) {
+          height: 450px;
+        }
+      }
     }
 
     .Content {
@@ -44,6 +76,14 @@
         color: $black;
 
         @include fontBase(45px, 700, 40px);
+
+        @media ($tablet) {
+          @include fontBase(35px, 700, 30px);
+        }
+
+        @media ($tablet-small) {
+          @include fontBase(25px, 700, 20px);
+        }
       }
 
       .SecondTitle {
@@ -55,6 +95,14 @@
         color: rgba($black, 0.17);
 
         @include fontBase(92px, 700, 1.1);
+
+        @media ($tablet) {
+          @include fontBase(82px, 700, 80px);
+        }
+
+        @media ($tablet-small) {
+          @include fontBase(62px, 700, 70px);
+        }
       }
 
       .Text {
@@ -68,6 +116,14 @@
       display: flex;
 
       margin-top: 45px;
+
+      @media ($tablet-small) {
+        width: 335px;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
     }
   }
 }

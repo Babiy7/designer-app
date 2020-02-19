@@ -15,8 +15,8 @@ const AboutMe = () => {
     <>
       <section id="about-me" className={classes.AboutMe}>
         <div className={classes.Container}>
-          <div className={classes.Image}>
-            <Image src={photo} alt="photo" />
+          <div className={classes.ImageContainer}>
+            <img className={classes.Image} src={photo} alt="photo" />
           </div>
 
           <div className={classes.Content}>

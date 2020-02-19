@@ -30,6 +30,12 @@
   &:hover {
     box-shadow: 2px 2px 10px rgba(#000, $alpha: 2.7);
   }
+
+  @media ($tablet-small) {
+    padding: 7px 20px;
+
+    font-size: 14px;
+  }
 }
 
 .ButtonGray {
