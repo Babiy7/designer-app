@@ -33,6 +33,12 @@ const Header = props => {
                 Hire me
               </Button>
             </nav>
+
+            <div className={classes.Burger}>
+              {[1, 2, 3].map(_ => (
+                <div className={classes.Line} />
+              ))}
+            </div>
           </div>
         </div>
       </header>

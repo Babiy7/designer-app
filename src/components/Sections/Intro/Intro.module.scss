@@ -3,7 +3,7 @@
 
 .Intro {
   .Container {
-    width: 1200px;
+    width: 100%;
     max-width: 1200px;
     height: 496px;
 
@@ -11,14 +11,43 @@
 
     display: flex;
     margin: 0 auto;
+    padding: 0 20px;
     border-bottom: 1px solid rgba($gray, 0.3);
 
     background: url("../../../assets/images/symbols.png") right bottom no-repeat;
+
+    @media ($tablet) {
+      height: 450px;
+
+      background-size: 455px auto;
+    }
+
+    @media ($mobile-large) {
+      height: 800px;
+
+      flex-direction: column;
+    }
+
+    @media ($mobile) {
+      width: 100%;
+      height: 800px;
+
+      flex-direction: column;
+      padding: 0;
+    }
 
     .Content {
       width: 50%;
 
       margin-top: 103px;
+
+      @media ($mobile-large) {
+        width: 100%;
+
+        margin-top: 0;
+
+        text-align: center;
+      }
 
       .Subtitle {
         color: $black;
@@ -47,6 +76,12 @@
     .Photo {
       position: absolute;
       right: 0;
+
+      @media ($tablet) {
+        width: 400px;
+
+        bottom: 0;
+      }
     }
   }
 }
