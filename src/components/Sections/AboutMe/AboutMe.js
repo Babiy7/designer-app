@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./AboutMe.module.scss";
 
-import { Image, Margin } from "../../UI/Helper/Helper";
+import { Margin } from "../../UI/Helper/Helper";
 import Button from "../../UI/Button/Button";
 import photo from "../../../assets/images/designer_photo.png";
 import ModalResume from "../../Modals/ModalResume/ModalResume";
@@ -16,7 +16,7 @@ const AboutMe = () => {
       <section id="about-me" className={classes.AboutMe}>
         <div className={classes.Container}>
           <div className={classes.ImageContainer}>
-            <img className={classes.Image} src={photo} alt="photo" />
+            <img className={classes.Image} src={photo} alt="img" />
           </div>
 
           <div className={classes.Content}>

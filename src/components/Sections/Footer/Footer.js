@@ -22,17 +22,23 @@ const Footer = () => {
             <div className={classes.Copyright}>
               &copy; 2018 UI43 - Free Templates
             </div>
+
             <div className={classes.Social}>
               {[instagram, behance, facebook, linkedin, twitter].map(icon => (
                 <img src={icon} alt="icon" className={classes.Icon} />
               ))}
             </div>
           </div>
+
           <nav className={classes.Nav}>
-            <NavLinks />
-            <Button type="gray" onClick={() => setShow(true)}>
-              Hire me
-            </Button>
+            <div>
+              <NavLinks />
+            </div>
+            <div>
+              <Button type="gray" onClick={() => setShow(true)}>
+                Hire me
+              </Button>
+            </div>
           </nav>
         </div>
       </footer>
