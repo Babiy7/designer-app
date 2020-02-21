@@ -12,6 +12,12 @@
 
   font-size: 14px;
   transition: background-color linear 0.2s;
+
+  @media ($tablet) {
+    padding: 7px 20px;
+
+    font-size: 14px;
+  }
 }
 
 .ButtonShadow {
@@ -54,6 +60,12 @@
   &:hover {
     background-color: $gray-light;
     color: $black;
+  }
+
+  @media ($tablet) {
+    padding: 7px 20px;
+
+    font-size: 14px;
   }
 }
 
