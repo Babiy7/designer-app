@@ -23,17 +23,11 @@
     }
 
     @media ($mobile-L) {
-      height: 800px;
+      height: auto;
 
-      flex-direction: column;
-    }
+      padding: 40px 0;
 
-    @media ($mobile-M) {
-      width: 100%;
-      height: 800px;
-
-      flex-direction: column;
-      padding: 0;
+      background: none;
     }
 
     .Content {
@@ -69,6 +63,7 @@
 
       .Buttons {
         display: flex;
+        justify-content: center;
         margin-top: 45px;
       }
     }
@@ -81,6 +76,10 @@
         width: 400px;
 
         bottom: 0;
+      }
+
+      @media ($mobile-L) {
+        display: none;
       }
     }
   }

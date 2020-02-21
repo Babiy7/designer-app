@@ -8,8 +8,18 @@ $input-focus-color: #00d3c8;
 
 //responsive
 $laptop-L: "max-width: 1366px";
+
 $laptop: "max-width: 1024px";
+$laptop-height: "max-height: 1366px";
+
 $tablet: "max-width: 768px";
+$tablet-height: "max-height: 1024px";
+
 $mobile-L: "max-width: 414px";
-$mobile-M: "max-width: 360px";
+$mobile-L-height: "max-height: 736px";
+
+$mobile-M: "max-width: 375px";
+$mobile-M-height: "max-height: 667px";
+
 $mobile-S: "max-width: 320px";
+$mobile-S-height: "max-height: 568px";
