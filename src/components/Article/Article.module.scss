@@ -7,6 +7,10 @@
   padding: 0 15px;
   margin-bottom: 50px;
 
+  @media ($mobile-L) {
+    width: 95%;
+  }
+
   .Item {
     color: $black;
 
@@ -57,11 +61,19 @@
         &:hover {
           text-decoration: underline;
         }
+
+        @media ($tablet) {
+          @include fontBase(15px, 700, 20px);
+        }
       }
 
       .Category {
         @include fontBase(12px, 500, 25px);
         text-transform: uppercase;
+
+        @media ($tablet) {
+          @include fontBase(10px, 500, 20px);
+        }
       }
 
       .Text {
@@ -70,6 +82,10 @@
         color: $gray;
 
         @include fontBase(12px, 300, 24px);
+
+        @media ($tablet) {
+          @include fontBase(10px, 300, 22px);
+        }
       }
     }
   }

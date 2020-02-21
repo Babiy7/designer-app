@@ -32,6 +32,10 @@
     .Articles {
       display: flex;
       flex-wrap: wrap;
+
+      @media ($mobile-L) {
+        justify-content: center;
+      }
     }
   }
 }
