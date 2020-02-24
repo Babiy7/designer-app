@@ -25,8 +25,8 @@ function App() {
       <News />
       <Footer />
 
-      <ModalResume show={true} />
-      <ModalProject show={false} />
+      <ModalResume show={false} />
+      <ModalProject show={true} />
       <ModalCall show={false} />
     </div>
   );
