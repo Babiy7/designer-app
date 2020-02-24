@@ -1,10 +1,14 @@
 import React from "react";
 import classes from "./Portfolio.module.scss";
+import clouds from "../../assets/images/clouds.jpg";
 
 const Portfolio = props => {
   return (
     <div className={classes.Portfolio}>
-      <div className={classes.Image}></div>
+      <div className={classes.Image}>
+        <div className={classes.Husk}></div>
+        <img src={clouds} alt="clouds" height="350" width="400" />
+      </div>
 
       <div className={classes.Content}>
         <div className={classes.Category}>

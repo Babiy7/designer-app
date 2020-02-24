@@ -3,6 +3,7 @@ import classes from "./Article.module.scss";
 
 import Button from "../UI/Button/Button";
 import { Margin } from "../UI/Helper/Helper";
+import tianjin from "../../assets/images/tianjin.jpg";
 
 const Article = props => {
   return (
@@ -12,7 +13,10 @@ const Article = props => {
           {props.number} <br /> {props.month}
         </div>
 
-        <div className={classes.Photo}></div>
+        <div className={classes.Photo}>
+          <div className={classes.Husk} />
+          <img src={tianjin} alt="tianjin" height="300" />
+        </div>
       </div>
 
       <div className={classes.Content}>

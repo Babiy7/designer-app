@@ -49,7 +49,24 @@
   .Image {
     height: 80%;
 
+    position: relative;
+
     background: $gray;
+
+    overflow: hidden;
+
+    .Husk {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-color: rgba(#000000, 0.3);
+
+      z-index: 10;
+    }
 
     @media ($mobile-L) {
       height: 80%;
