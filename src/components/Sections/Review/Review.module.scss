@@ -5,10 +5,14 @@
   position: relative;
 
   padding: 70px 0;
-  margin: 80px 0 0 0;
+  margin-top: 80px;
 
   background: url("../../../assets/images/review_bg.png") center no-repeat;
   background-color: $review-bg;
+
+  @media ($mobile-L) {
+    margin-top: 0px;
+  }
 
   .Item {
     width: 100%;

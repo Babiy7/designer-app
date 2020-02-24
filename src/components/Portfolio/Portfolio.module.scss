@@ -27,19 +27,11 @@
   @media ($tablet) {
     width: 40%;
     height: 300px;
-
-    &:last-child {
-      transform: translateX(-154px);
-    }
   }
 
   @media ($mobile-L) {
     width: 90%;
     height: 400px;
-
-    &:last-child {
-      transform: none;
-    }
   }
 
   @media ($mobile-S) {
