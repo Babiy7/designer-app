@@ -86,6 +86,7 @@
       @media ($mobile-L) {
         height: 55%;
 
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
       }

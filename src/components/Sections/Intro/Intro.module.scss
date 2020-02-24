@@ -64,6 +64,10 @@
       .Buttons {
         display: flex;
         margin-top: 45px;
+
+        @media ($mobile-L) {
+          justify-content: center;
+        }
       }
     }
 
