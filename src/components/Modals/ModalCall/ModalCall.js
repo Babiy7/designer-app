@@ -5,6 +5,7 @@ import Modal from "../../UI/Modal/Modal";
 import Button from "../../UI/Button/Button";
 import call from "../../../assets/svg/call.svg";
 import email from "../../../assets/svg/email.svg";
+import city from "../../../assets/images/city.jpg";
 
 const ModalCall = props => {
   return (
@@ -56,7 +57,9 @@ const ModalCall = props => {
           </form>
         </div>
 
-        <div className={classes.Right}></div>
+        <div className={classes.Right}>
+          <img src={city} alt="city" height="700" width="500" />
+        </div>
       </div>
     </Modal>
   );

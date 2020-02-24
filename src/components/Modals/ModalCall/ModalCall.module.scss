@@ -16,14 +16,26 @@
 
     color: $black;
 
+    @media ($mobile-L) {
+      width: 100%;
+    }
+
     .Title {
       @include fontBase(45px, 700, 45px);
       text-transform: uppercase;
+
+      @media ($mobile-M) {
+        @include fontBase(35px, 700, 35px);
+      }
     }
 
     .Subtitle {
       @include fontBase(16px, 400, 45px);
       text-transform: uppercase;
+
+      @media ($mobile-M) {
+        @include fontBase(13px, 400, 35px);
+      }
     }
 
     .Contacts {
@@ -33,6 +45,11 @@
       margin-bottom: 45px;
 
       list-style: none;
+
+      @media ($mobile-M) {
+        margin-top: 10px;
+        margin-bottom: 25px;
+      }
 
       .Icon {
         width: 17px;
@@ -83,6 +100,10 @@
           height: 200px;
 
           resize: none;
+
+          @media ($mobile-M) {
+            height: 170px;
+          }
         }
 
         .Label {
@@ -104,5 +125,9 @@
     width: 52%;
 
     background-color: $gray;
+
+    @media ($mobile-L) {
+      display: none;
+    }
   }
 }

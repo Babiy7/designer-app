@@ -22,9 +22,13 @@
 }
 
 .Small {
-  width: 100%;
+  width: 95%;
   max-width: 900px;
   height: 676px;
+
+  @media ($mobile-M) {
+    height: 600px;
+  }
 }
 
 .Middle {
