@@ -38,5 +38,9 @@
     color: $gray;
 
     @include fontBase(12px, 300, 18px);
+
+    @media ($tablet) {
+      @include fontBase(10px, 300, 16px);
+    }
   }
 }

@@ -2,6 +2,7 @@
 @import "../../../mixins.scss";
 
 .ModalResume {
+  border: red solid;
   width: 100%;
   max-width: 1200px;
 
@@ -13,6 +14,10 @@
   padding: 79px 20px;
 
   background: white;
+  box-sizing: border-box;
+
+  @media ($tablet) {
+  }
 
   .Title {
     margin-bottom: 54px;
@@ -25,7 +30,6 @@
 
   .Buttons {
     display: flex;
-
     margin-bottom: 63px;
   }
 
@@ -43,12 +47,20 @@
 
       text-align: right;
 
+      @media ($tablet) {
+        padding-left: 45px;
+      }
+
       .Items {
       }
     }
 
     .Education {
       width: 300px;
+
+      @media ($tablet) {
+        padding-right: 45px;
+      }
     }
 
     .TimelineTitle {
