@@ -11,81 +11,84 @@
     width: 95%;
   }
 
-  .Item {
-    color: $black;
+  color: $black;
 
-    .Header {
-      position: relative;
+  .Header {
+    position: relative;
 
-      .Date {
-        width: 80px;
-        height: 80px;
+    .Date {
+      width: 80px;
+      height: 80px;
 
-        position: absolute;
-        top: 0;
-        left: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        background: $black;
-        color: $white;
+      background: $black;
+      color: $white;
 
-        @include fontBase(16px, 300, 21px);
-        text-align: center;
-      }
+      @include fontBase(16px, 300, 21px);
+      text-align: center;
 
-      .Photo {
-        height: 257px;
-
-        margin-bottom: 15px;
-
-        background: $gray;
+      @media ($tablet) {
+        width: 70px;
+        height: 70px;
       }
     }
 
-    .Content {
-      color: $black;
+    .Photo {
+      height: 257px;
 
-      .Title {
-        @include fontBase(18px, 700, 25px);
-        text-transform: uppercase;
+      margin-bottom: 15px;
 
-        a {
-          color: inherit;
+      background: $gray;
+    }
+  }
 
-          text-decoration: none;
-        }
+  .Content {
+    color: $black;
 
-        &:hover {
-          text-decoration: underline;
-        }
+    .Title {
+      @include fontBase(18px, 700, 25px);
+      text-transform: uppercase;
 
-        @media ($tablet) {
-          @include fontBase(15px, 700, 20px);
-        }
+      a {
+        color: inherit;
+
+        text-decoration: none;
       }
 
-      .Category {
-        @include fontBase(12px, 500, 25px);
-        text-transform: uppercase;
-
-        @media ($tablet) {
-          @include fontBase(10px, 500, 20px);
-        }
+      &:hover {
+        text-decoration: underline;
       }
 
-      .Text {
-        margin-top: 20px;
+      @media ($tablet) {
+        @include fontBase(15px, 700, 20px);
+      }
+    }
 
-        color: $gray;
+    .Category {
+      @include fontBase(12px, 500, 25px);
+      text-transform: uppercase;
 
-        @include fontBase(12px, 300, 24px);
+      @media ($tablet) {
+        @include fontBase(10px, 500, 20px);
+      }
+    }
 
-        @media ($tablet) {
-          @include fontBase(10px, 300, 22px);
-        }
+    .Text {
+      margin-top: 20px;
+
+      color: $gray;
+
+      @include fontBase(12px, 300, 24px);
+
+      @media ($tablet) {
+        @include fontBase(10px, 300, 22px);
       }
     }
   }

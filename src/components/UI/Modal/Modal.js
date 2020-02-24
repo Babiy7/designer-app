@@ -25,8 +25,7 @@ const Modal = props => {
           transform: props.show
             ? "translate(-50%, -50%)"
             : "translateY(-100vh)",
-          display: props.show ? "block" : "none",
-          overflow: props.overflow ? "auto" : "hidden"
+          display: props.show ? "block" : "none"
         }}
       >
         {props.children}
