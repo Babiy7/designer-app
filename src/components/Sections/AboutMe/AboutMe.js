@@ -59,8 +59,6 @@ const AboutMe = () => {
           </div>
         </div>
       </section>
-      <ModalResume show={showResume} unShow={() => setShowResume(false)} />
-      <ModalCall show={showCall} unShow={() => setShowCall(false)} />
     </>
   );
 };

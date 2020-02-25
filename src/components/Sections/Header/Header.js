@@ -42,7 +42,6 @@ const Header = props => {
           </div>
         </div>
       </header>
-      <ModalCall show={show} unShow={() => setShow(false)} />
     </>
   );
 };

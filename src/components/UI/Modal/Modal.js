@@ -7,6 +7,8 @@ import ButtonClose from "../ButtonClose/ButtonClose";
 const Modal = props => {
   let modal = null;
 
+  console.log(props.unShow);
+
   if (props.size === "lg") {
     modal = [classes.Modal, classes.Large].join(" ");
   } else if (props.size === "md") {
@@ -29,7 +31,7 @@ const Modal = props => {
         }}
       >
         {props.children}
-        <ButtonClose />
+        <ButtonClose unShow={props.unShow} />
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./App.module.scss";
 
 import { connect } from "react-redux";
+import { CALL, RESUME, PROJECT } from "../store/actionTypes";
 
 import ModalProject from "../components/Modals/ModalProject/ModalProject";
 import ModalResume from "../components/Modals/ModalResume/ModalResume";
@@ -17,9 +18,7 @@ import Footer from "../components/Sections/Footer/Footer";
 function App(props) {
   console.log("App render");
 
-  const modal = props.modal;
-
-  console.log(props);
+  const [call, resume, project] = props.modals;
 
   return (
     <div className={classes.App}>
@@ -31,17 +30,21 @@ function App(props) {
       <News />
       <Footer />
 
-      <ModalResume show={modal.resume.isOpen} />
-      <ModalProject show={modal.project.isOpen} />
-      <ModalCall show={modal.call.isOpen} />
+      <ModalResume show={resume.isOpen} unShow={() => props.resume()} />
+      <ModalProject show={project.isOpen} unShow={() => props.project()} />
+      <ModalCall show={call.isOpen} unShow={() => props.call()} />
     </div>
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    modal: state.modal
-  };
-};
+const mapStateToProps = state => ({
+  modals: [state.modal.call, state.modal.resume, state.modal.project]
+});
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => ({
+  call: () => dispatch({ type: CALL }),
+  resume: () => dispatch({ type: RESUME }),
+  project: () => dispatch({ type: PROJECT })
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
