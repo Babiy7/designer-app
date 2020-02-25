@@ -1,19 +1,19 @@
-import { actionTypes as action } from "../actionTypes";
+import { OPEN_CALL, OPEN_PROJECT, OPEN_RESUME } from "../actionTypes";
 
 export const openCall = () => {
   return {
-    type: action.OPEN_CALL
+    type: OPEN_CALL
   };
 };
 
 export const openResume = () => {
   return {
-    type: action.OPEN_RESUME
+    type: OPEN_RESUME
   };
 };
 
 export const openProject = () => {
   return {
-    type: action.OPEN_PROJECT
+    type: OPEN_PROJECT
   };
 };

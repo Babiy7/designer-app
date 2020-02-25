@@ -1,4 +1,4 @@
-import { actionTypes as action } from "../actionTypes";
+import { OPEN_CALL, OPEN_PROJECT, OPEN_RESUME } from "../actionTypes";
 import { updateState } from "../../shared/utility";
 
 const initialState = {
@@ -15,23 +15,23 @@ const initialState = {
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case action.OPEN_CALL:
+    case OPEN_CALL:
       return updateState(state, payload);
 
-    case action.OPEN_PROJECT:
+    case OPEN_PROJECT:
       return updateState(state, payload);
 
-    case action.OPEN_RESUME:
+    case OPEN_RESUME:
       return updateState(state, payload);
 
-    case action.CLOSE_CALL:
-      return updateState(state, payload);
+    // case action.CLOSE_CALL:
+    //   return updateState(state, payload);
 
-    case action.CLOSE_PROJECT:
-      return updateState(state, payload);
+    // case action.CLOSE_PROJECT:
+    //   return updateState(state, payload);
 
-    case action.CLOSE_RESUME:
-      return updateState(state, payload);
+    // case action.CLOSE_RESUME:
+    //   return updateState(state, payload);
 
     default:
       return state;
