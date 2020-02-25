@@ -45,7 +45,12 @@ class ModalProject extends React.Component {
       adaptiveHeight: true
     };
     return (
-      <Modal overflow={false} size="md" show={this.props.show}>
+      <Modal
+        overflow={false}
+        size="md"
+        show={this.props.show}
+        unShow={this.props.unShow}
+      >
         <div className={classes.ModalProject}>
           <div className={classes.Left}>
             <Slider

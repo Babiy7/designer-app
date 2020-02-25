@@ -1,6 +1,9 @@
 import React from "react";
 import classes from "./Footer.module.scss";
 
+import { connect } from "react-redux";
+import { CALL } from "../../../store/actionTypes";
+
 import NavLinks from "../../UI/NavLinks/NavLinks";
 import Button from "../../UI/Button/Button";
 
@@ -10,7 +13,7 @@ import facebook from "../../../assets/icons/facebook.svg";
 import linkedin from "../../../assets/icons/linkedin.svg";
 import twitter from "../../../assets/icons/twitter.svg";
 
-const Footer = () => {
+const Footer = props => {
   return (
     <>
       <footer className={classes.Footer}>
@@ -32,7 +35,14 @@ const Footer = () => {
               <NavLinks />
             </div>
             <div>
-              <Button type="gray">Hire me</Button>
+              <Button
+                type="gray"
+                onClick={() => {
+                  props.call();
+                }}
+              >
+                Hire me
+              </Button>
             </div>
           </nav>
         </div>
@@ -41,4 +51,10 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+const mapDispatchToProps = dispatch => {
+  return {
+    call: () => dispatch({ type: CALL })
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Footer);
