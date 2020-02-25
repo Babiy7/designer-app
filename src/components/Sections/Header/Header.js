@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Header.module.scss";
 
-import { CALL, RESUME } from "../../../store/actionTypes";
+import { CALL } from "../../../store/actionTypes";
 import { connect } from "react-redux";
 
 import Avatar from "../../Avatar/Avatar";

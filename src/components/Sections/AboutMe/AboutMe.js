@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./AboutMe.module.scss";
+
+import { connect } from "react-redux";
+import { CALL, RESUME } from "../../../store/actionTypes";
 
 import { Margin } from "../../UI/Helper/Helper";
 import Button from "../../UI/Button/Button";
 import photo from "../../../assets/images/designer_photo.png";
-import ModalResume from "../../Modals/ModalResume/ModalResume";
-import ModalCall from "../../Modals/ModalCall/ModalCall";
 
-const AboutMe = () => {
-  const [showResume, setShowResume] = useState(false);
-  const [showCall, setShowCall] = useState(false);
-
+const AboutMe = props => {
   return (
     <>
       <section id="about-me" className={classes.AboutMe}>
@@ -47,12 +45,22 @@ const AboutMe = () => {
 
             <div className={classes.Buttons}>
               <Margin right="15">
-                <Button type="shadow" onClick={() => setShowCall(true)}>
+                <Button
+                  type="shadow"
+                  onClick={() => {
+                    props.call();
+                  }}
+                >
                   Hire me
                 </Button>
               </Margin>
 
-              <Button type="shadow" onClick={() => setShowResume(true)}>
+              <Button
+                type="shadow"
+                onClick={() => {
+                  props.resume();
+                }}
+              >
                 See my resume
               </Button>
             </div>
@@ -63,4 +71,11 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+const mapDispatchToProps = dispatch => {
+  return {
+    call: () => dispatch({ type: CALL }),
+    resume: () => dispatch({ type: RESUME })
+  };
+};
+
+export default connect(null, mapDispatchToProps)(AboutMe);
