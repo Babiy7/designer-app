@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./Header.module.scss";
+
+import { CALL, RESUME } from "../../../store/actionTypes";
+import { connect } from "react-redux";
 
 import Avatar from "../../Avatar/Avatar";
 import NavLinks from "../../UI/NavLinks/NavLinks";
 import Button from "../../UI/Button/Button";
-import ModalCall from "../../Modals/ModalCall/ModalCall";
 
 const Header = props => {
-  const [show, setShow] = useState(false);
-
   return (
     <>
       <header className={classes.Header}>
@@ -29,7 +29,13 @@ const Header = props => {
 
             <nav className={classes.Nav}>
               <NavLinks />
-              <Button type="normal" onClick={() => setShow(true)}>
+
+              <Button
+                type="normal"
+                onClick={() => {
+                  props.call();
+                }}
+              >
                 Hire me
               </Button>
             </nav>
@@ -46,4 +52,10 @@ const Header = props => {
   );
 };
 
-export default Header;
+const mapDispatchToProps = dispatch => {
+  return {
+    call: () => dispatch({ type: CALL })
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Header);

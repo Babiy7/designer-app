@@ -13,8 +13,8 @@ const initialState = {
   }
 };
 
-export default (state = initialState, { type, payload }) => {
-  switch (type) {
+export default (state = initialState, action) => {
+  switch (action.type) {
     case CALL:
       const call = {
         call: {
@@ -41,15 +41,6 @@ export default (state = initialState, { type, payload }) => {
       };
 
       return updateState(state, resume);
-
-    // case action.CLOSE_CALL:
-    //   return updateState(state, payload);
-
-    // case action.CLOSE_PROJECT:
-    //   return updateState(state, payload);
-
-    // case action.CLOSE_RESUME:
-    //   return updateState(state, payload);
 
     default:
       return state;
