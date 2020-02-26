@@ -16,8 +16,6 @@ import News from "../components/Sections/News/News";
 import Footer from "../components/Sections/Footer/Footer";
 
 function App(props) {
-  console.log("App render");
-
   const [call, resume, project] = props.modals;
 
   return (
