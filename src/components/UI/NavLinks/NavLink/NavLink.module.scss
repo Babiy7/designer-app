@@ -2,6 +2,7 @@
 
 .NavLink {
   height: 20px;
+
   position: relative;
 
   padding: 0;
@@ -36,6 +37,15 @@
 
       display: block;
     }
+  }
+
+  @media ($mobile-L) {
+    height: auto;
+
+    display: block;
+    margin-top: 30px;
+
+    font-size: 20px;
   }
 }
 

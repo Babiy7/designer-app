@@ -1,0 +1,30 @@
+.Drawer {
+  width: 80%;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  padding: 30px 0 15px 20px;
+
+  background: white;
+
+  z-index: 100;
+  transition: all 0.2s ease-out;
+
+  .Nav {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+  }
+}
+
+.Open {
+  transform: translateX(0);
+}
+
+.Close {
+  transform: translateX(-100%);
+}
