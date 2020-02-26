@@ -12,22 +12,32 @@
 
   z-index: 2000;
   overflow: auto;
+  overflow-x: hidden;
   transform: translate(-50%, -50%);
 }
 
 .Large {
-  width: 1200px;
+  width: 95%;
+  max-width: 1200px;
   height: 95vh;
 }
 
 .Small {
-  width: 100%;
+  width: 95%;
   max-width: 900px;
   height: 676px;
+
+  @media ($mobile-M) {
+    height: 600px;
+  }
 }
 
 .Middle {
-  width: 100%;
+  width: 95%;
   max-width: 900px;
   height: 770px;
+
+  @media ($mobile-L) {
+    height: 80vh;
+  }
 }

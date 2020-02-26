@@ -4,6 +4,10 @@
 .News {
   margin-top: 220px;
 
+  @media ($tablet) {
+    margin-top: 170px;
+  }
+
   .Container {
     width: 100%;
     max-width: 1171px;
@@ -32,6 +36,10 @@
     .Articles {
       display: flex;
       flex-wrap: wrap;
+
+      @media ($mobile-L) {
+        justify-content: center;
+      }
     }
   }
 }

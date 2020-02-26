@@ -16,33 +16,23 @@
       justify-content: space-between;
       align-items: center;
 
-      .UserContainer {
-        width: 169px;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .UserName {
-          margin-bottom: 3px;
-
-          color: $black;
-
-          @include fontBase(16px, 700, 18px);
-        }
-
-        .UserProf {
-          color: rgba($black, 0.7);
-
-          font-size: 12px;
-        }
-      }
-
       .Nav {
         height: 100%;
 
         display: flex;
         align-items: center;
+
+        @media ($mobile-L) {
+          display: none;
+        }
+      }
+
+      .Button {
+        display: none;
+
+        @media ($mobile-L) {
+          display: block;
+        }
       }
     }
   }

@@ -13,6 +13,7 @@
   padding: 79px 20px;
 
   background: white;
+  box-sizing: border-box;
 
   .Title {
     margin-bottom: 54px;
@@ -21,11 +22,14 @@
 
     @include fontBase(45px, 700, 53px);
     text-align: center;
+
+    @media ($mobile-L) {
+      @include fontBase(35px, 700, 43px);
+    }
   }
 
   .Buttons {
     display: flex;
-
     margin-bottom: 63px;
   }
 
@@ -33,6 +37,13 @@
     width: 768px;
 
     display: flex;
+
+    @media ($mobile-L) {
+      width: 95%;
+
+      flex-direction: column;
+      align-items: center;
+    }
 
     .Experience {
       width: 384px;
@@ -43,12 +54,39 @@
 
       text-align: right;
 
+      @media ($tablet) {
+        padding-left: 45px;
+      }
+
+      @media ($mobile-L) {
+        width: 100%;
+
+        padding: 0;
+        margin: 0;
+        border-right: none;
+
+        text-align: center;
+      }
+
       .Items {
       }
     }
 
     .Education {
       width: 300px;
+
+      @media ($tablet) {
+        padding-right: 45px;
+      }
+
+      @media ($mobile-L) {
+        width: 95%;
+
+        padding: 0;
+        margin-top: 50px;
+
+        text-align: center;
+      }
     }
 
     .TimelineTitle {

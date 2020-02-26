@@ -1,49 +1,54 @@
 @import "../../../vars";
 @import "../../../button";
 
-.ButtonNormal {
-  @extend %button-shared;
+.Button {
+  margin: 0;
+  padding: 10px 30px;
+  border-radius: 50px;
+  outline: none;
 
-  border: 2px solid $black;
-  padding: 11px 40px;
+  background: none;
 
-  color: $black;
-  background-color: none;
-
+  text-transform: uppercase;
   font-size: 14px;
-  transition: background-color linear 0.2s;
-}
-
-.ButtonShadow {
-  @extend %button-shared;
-
-  display: inline-block;
-
-  border: 0.7px solid $black;
+  font-weight: 700;
+  text-decoration: none;
 
   color: $black;
 
-  font-size: 16px;
-  transition: background-color linear 0.2s, box-shadow 0.2s linear;
-  font-family: inherit;
+  transition: all linear 0.2s;
+  cursor: pointer;
 
   &:hover {
-    box-shadow: 2px 2px 10px rgba(#000, $alpha: 2.7);
+    outline: none;
+
+    background-color: $black;
+    color: $white;
+  }
+
+  @media ($tablet) {
+    padding: 5px 25px;
+
+    font-size: 12px;
   }
 }
 
-.ButtonGray {
-  @extend %button-shared;
+.Normal {
+  border: 2px solid $black;
+}
 
-  width: 146px;
+.Shadow {
+  border: 0.7px solid $black;
 
-  padding: 11px 0;
+  &:hover {
+    box-shadow: 2px 2px 10px rgba(#000, 2.7);
+  }
+}
+
+.Gray {
   border: 2px solid $gray-light;
 
   color: $gray-light;
-
-  font-size: 14px;
-  transition: background-color linear 0.2s;
 
   &:hover {
     background-color: $gray-light;

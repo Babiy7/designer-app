@@ -2,7 +2,13 @@
 @import "../../../mixins";
 
 .AboutMe {
+  position: relative;
+
   padding: 90px 0 30px 0;
+
+  @media ($laptop) {
+    padding: 20px 15px;
+  }
 
   .Container {
     max-width: 1084px;
@@ -10,7 +16,7 @@
     display: flex;
     margin: 0 auto;
 
-    .Image {
+    .ImageContainer {
       position: relative;
 
       width: 50%;
@@ -33,6 +39,40 @@
 
         z-index: -1;
       }
+
+      @media ($laptop) {
+        height: 550px;
+      }
+
+      @media ($tablet) {
+        transform: translateY(40px);
+
+        &:before {
+          width: 310px;
+          height: 310px;
+        }
+      }
+
+      @media ($mobile-L) {
+        display: none;
+      }
+
+      .Image {
+        position: absolute;
+        bottom: 0;
+
+        @media ($laptop) {
+          height: 500px;
+        }
+
+        @media ($tablet) {
+          height: 450px;
+        }
+
+        @media (max-height: 414px) and ($mobile-L-land) {
+          height: 400px;
+        }
+      }
     }
 
     .Content {
@@ -40,10 +80,32 @@
 
       padding: 50px 0 50px 50px;
 
+      @media ($mobile-L) {
+        width: 100%;
+
+        padding-left: 0;
+
+        text-align: center;
+      }
+
+      @media ($mobile-S) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       .FirstTitle {
         color: $black;
 
         @include fontBase(45px, 700, 40px);
+
+        @media ($laptop) {
+          @include fontBase(35px, 700, 30px);
+        }
+
+        @media ($tablet) {
+          @include fontBase(25px, 700, 20px);
+        }
       }
 
       .SecondTitle {
@@ -55,6 +117,20 @@
         color: rgba($black, 0.17);
 
         @include fontBase(92px, 700, 1.1);
+
+        @media ($laptop) {
+          @include fontBase(82px, 700, 80px);
+        }
+
+        @media ($tablet) {
+          @include fontBase(62px, 700, 70px);
+        }
+
+        @media ($mobile-S) {
+          margin-left: 30px;
+
+          @include fontBase(45px, 700, 60px);
+        }
       }
 
       .Text {
@@ -68,6 +144,32 @@
       display: flex;
 
       margin-top: 45px;
+
+      @media ($tablet) {
+        width: 335px;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      @media ($mobile-L) {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 30px;
+      }
+
+      @media ($mobile-S) {
+        width: 80%;
+        height: 80px;
+
+        margin-left: 0;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
   }
 }

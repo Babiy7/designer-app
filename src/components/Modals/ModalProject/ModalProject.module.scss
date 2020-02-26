@@ -2,8 +2,8 @@
 @import "../../../mixins.scss";
 
 .ModalProject {
+  width: 100%;
   max-width: 1200px;
-  height: 770px;
 
   display: flex;
 
@@ -11,6 +11,10 @@
     width: 65%;
 
     background-color: $gray;
+
+    @media ($mobile-L) {
+      display: none;
+    }
 
     .Image {
       width: 100%;
@@ -23,6 +27,10 @@
 
     position: relative;
 
+    @media ($mobile-L) {
+      width: 100%;
+    }
+
     .Content {
       padding: 50px 0 11px 27px;
 
@@ -30,6 +38,10 @@
         color: $black;
 
         @include fontBase(32px, 700, 45px);
+
+        @media ($tablet) {
+          @include fontBase(27px, 700, 38px);
+        }
       }
 
       .SubTitle {
@@ -38,6 +50,10 @@
         color: $gray;
 
         @include fontBase(18px, 300, 30px);
+
+        @media ($tablet) {
+          @include fontBase(15px, 300, 25px);
+        }
 
         .Category {
           height: 17px;
@@ -84,6 +100,10 @@
         color: $gray;
 
         @include fontBase(12px, 300, 24px);
+
+        @media ($tablet) {
+          @include fontBase(10px, 300, 20px);
+        }
       }
     }
 
@@ -97,6 +117,10 @@
       display: flex;
       justify-content: space-between;
       padding: 21px 11px;
+
+      @media ($mobile-L) {
+        display: none;
+      }
     }
   }
 }

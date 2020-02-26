@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./Intro.module.scss";
+
+import { connect } from "react-redux";
+import { CALL, RESUME } from "../../../store/actionTypes";
 
 import SocialImage from "../../SocialImage/SocialImage";
 import Button from "../../UI/Button/Button";
 import { Image, Margin } from "../../UI/Helper/Helper";
 import person from "../../../assets/images/photo.png";
-import ModalResume from "../../Modals/ModalResume/ModalResume";
-import ModalCall from "../../Modals/ModalCall/ModalCall";
 
-const Intro = () => {
-  const [showResume, setShowResume] = useState(false);
-  const [showCall, setShowCall] = useState(false);
-  let body = document.getElementsByTagName("body")[0];
-
+const Intro = props => {
   return (
     <>
       <div className={classes.Intro}>
@@ -42,8 +39,7 @@ const Intro = () => {
                 <Button
                   type="shadow"
                   onClick={() => {
-                    body.style.overflow = "hidden";
-                    setShowCall(true);
+                    props.call();
                   }}
                 >
                   Hire me
@@ -53,8 +49,7 @@ const Intro = () => {
               <Button
                 type="shadow"
                 onClick={() => {
-                  body.style.overflow = "hidden";
-                  setShowResume(true);
+                  props.resume();
                 }}
               >
                 See my resume
@@ -67,22 +62,16 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <ModalResume
-        show={showResume}
-        unShow={() => {
-          body.style.overflow = "auto";
-          setShowResume(false);
-        }}
-      />
-      <ModalCall
-        show={showCall}
-        unShow={() => {
-          body.style.overflow = "auto";
-          setShowCall(false);
-        }}
       />
     </>
   );
 };
 
-export default Intro;
+const mapDispatchToProps = dispatch => {
+  return {
+    call: () => dispatch({ type: CALL }),
+    resume: () => dispatch({ type: RESUME })
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Intro);

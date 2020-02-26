@@ -3,7 +3,7 @@
 
 .Intro {
   .Container {
-    width: 1200px;
+    width: 100%;
     max-width: 1200px;
     height: 496px;
 
@@ -11,14 +11,37 @@
 
     display: flex;
     margin: 0 auto;
+    padding: 0 20px;
     border-bottom: 1px solid rgba($gray, 0.3);
 
     background: url("../../../assets/images/symbols.png") right bottom no-repeat;
+
+    @media ($laptop) {
+      height: 450px;
+
+      background-size: 455px auto;
+    }
+
+    @media ($mobile-L) {
+      height: auto;
+
+      padding: 40px 0;
+
+      background: none;
+    }
 
     .Content {
       width: 50%;
 
       margin-top: 103px;
+
+      @media ($mobile-L) {
+        width: 100%;
+
+        margin-top: 0;
+
+        text-align: center;
+      }
 
       .Subtitle {
         color: $black;
@@ -38,15 +61,33 @@
         font-size: 18px;
       }
 
+      .Socials {
+        z-index: 0;
+      }
+
       .Buttons {
         display: flex;
         margin-top: 45px;
+
+        @media ($mobile-L) {
+          justify-content: center;
+        }
       }
     }
 
     .Photo {
       position: absolute;
       right: 0;
+
+      @media ($laptop) {
+        width: 400px;
+
+        bottom: 0;
+      }
+
+      @media ($mobile-L) {
+        display: none;
+      }
     }
   }
 }

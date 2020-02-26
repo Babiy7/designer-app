@@ -1,11 +1,13 @@
 import React from "react";
 import classes from "./News.module.scss";
 
+import { connect } from "react-redux";
+
 import Article from "../../Article/Article";
 import Button from "../../UI/Button/Button";
 import { ContentCenterHorisontal } from "../../UI/Helper/Helper";
 
-const News = () => {
+const News = props => {
   return (
     <section className={classes.News}>
       <div className={classes.Container}>
@@ -14,50 +16,7 @@ const News = () => {
           <div className={classes.Text}>Sometimes i write something smart</div>
         </div>
         <div className={classes.Articles}>
-          {[
-            {
-              title: "ten the best app in 2017",
-              category: "category",
-              date: "10 June",
-              text:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat."
-            },
-            {
-              title: "website inspiration",
-              category: "category",
-              date: "17 June",
-              text:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat."
-            },
-            {
-              title: "changes in social media",
-              category: "category",
-              date: "27 June",
-              text:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat."
-            },
-            {
-              title: "changes in social media",
-              category: "category",
-              date: "27 June",
-              text:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat."
-            },
-            {
-              title: "changes in social media",
-              category: "category",
-              date: "27 June",
-              text:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat."
-            },
-            {
-              title: "changes in social media",
-              category: "category",
-              date: "27 June",
-              text:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat."
-            }
-          ].map(article => {
+          {props.news.map(article => {
             let date = article.date.split(" ");
 
             return (
@@ -80,4 +39,8 @@ const News = () => {
   );
 };
 
-export default News;
+const mapStateToProps = state => ({
+  news: state.news.news
+});
+
+export default connect(mapStateToProps)(News);
