@@ -19,6 +19,8 @@ const SideDrawer = props => {
         <nav className={classes.Nav}>
           <NavLinks />
         </nav>
+        <div className={classes.LineFirst}></div>
+        <div className={classes.LineSecond}></div>
       </div>
     </>
   );

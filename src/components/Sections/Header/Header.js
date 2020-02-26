@@ -8,16 +8,20 @@ import Logo from "../../UI/Logo/Logo";
 import NavLinks from "../../UI/NavLinks/NavLinks";
 import Button from "../../UI/Button/Button";
 import SideDrawer from "../../UI/SideDrawer/SideDrawer";
+import BurgerButton from "../../UI/BurgerButton/BurgerButton";
 
 const Header = props => {
-  const [state, setState] = useState(false);
+  const [show, setShow] = useState(false);
 
-  function open() {
-    setState(true);
+  const body = document.getElementsByTagName("body")[0];
+  body.style.overflow = show ? "hidden" : "auto";
+
+  function openDrawer() {
+    setShow(true);
   }
 
-  function close() {
-    setState(false);
+  function closeDrawer() {
+    setShow(false);
   }
 
   return (
@@ -39,21 +43,12 @@ const Header = props => {
                 Hire me
               </Button>
             </nav>
-
-            <div
-              className={classes.Burger}
-              onClick={() => {
-                open();
-              }}
-              style={{ display: state ? "none" : "flex" }}
-            >
-              {[1, 2, 3].map(_ => (
-                <div className={classes.Line} />
-              ))}
+            <div className={classes.Button}>
+              <BurgerButton show={openDrawer} open={show} />
             </div>
           </div>
         </div>
-        <SideDrawer show={state} unShow={close} />
+        <SideDrawer show={show} unShow={closeDrawer} />
       </header>
     </>
   );

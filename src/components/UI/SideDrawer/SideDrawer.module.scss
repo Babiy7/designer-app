@@ -1,3 +1,5 @@
+@import "../../../vars.scss";
+
 .Drawer {
   width: 80%;
   height: 100vh;
@@ -6,18 +8,53 @@
   top: 0;
   left: 0;
 
+  display: none;
   padding: 30px 0 15px 20px;
 
   background: white;
 
   z-index: 100;
   transition: all 0.2s ease-out;
+  overflow: hidden;
 
   .Nav {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     margin-top: 20px;
+    text-align: left;
+  }
+
+  .LineFirst {
+    width: 700px;
+    height: 300px;
+
+    position: absolute;
+    left: -100px;
+    bottom: -20px;
+
+    background: rgba($color: #000000, $alpha: 0.4);
+
+    transform: rotate(-45deg);
+  }
+
+  .LineSecond {
+    width: 700px;
+    height: 300px;
+
+    position: absolute;
+    left: -200px;
+    top: -250px;
+
+    background: rgba($color: #000000, $alpha: 0.1);
+
+    transform: rotate(-15deg);
+    z-index: -10;
+  }
+
+  @media ($mobile-L) {
+    display: block;
   }
 }
 

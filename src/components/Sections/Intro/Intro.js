@@ -10,8 +10,6 @@ import { Image, Margin } from "../../UI/Helper/Helper";
 import person from "../../../assets/images/photo.png";
 
 const Intro = props => {
-  let body = document.getElementsByTagName("body")[0];
-
   return (
     <>
       <div className={classes.Intro}>

@@ -27,34 +27,11 @@
         }
       }
 
-      .Burger {
-        width: 40px;
-        height: 40px;
-
+      .Button {
         display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 12px 10px;
-        border-radius: 50%;
-
-        transition: all 0.2s linear;
-
-        &:hover {
-          background: rgba($black, 0.2);
-
-          .Line {
-            background: rgba(#000000, 0.6);
-          }
-        }
-
-        .Line {
-          height: 2px;
-
-          background: black;
-        }
 
         @media ($mobile-L) {
-          display: flex;
+          display: block;
         }
       }
     }

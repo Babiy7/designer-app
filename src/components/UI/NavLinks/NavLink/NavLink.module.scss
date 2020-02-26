@@ -40,9 +40,10 @@
   }
 
   @media ($mobile-L) {
+    width: auto;
     height: auto;
 
-    display: block;
+    display: initial;
     margin-top: 30px;
 
     font-size: 20px;
