@@ -1,3 +1,5 @@
+import { CHANGE_CATEGORY } from "../actionTypes";
+
 const initialState = {
   category: "",
   portfolios: [
@@ -15,7 +17,7 @@ const initialState = {
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case typeName:
+    case CHANGE_CATEGORY:
       return { ...state, ...payload };
 
     default:
