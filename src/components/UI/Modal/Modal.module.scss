@@ -5,7 +5,6 @@
   top: 50%;
   left: 50%;
 
-  display: none;
   margin: auto;
 
   background-color: $white;
@@ -14,6 +13,7 @@
   overflow: auto;
   overflow-x: hidden;
   transform: translate(-50%, -50%);
+  transition: transform 0.2s linear;
 }
 
 .Large {
