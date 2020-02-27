@@ -5,7 +5,6 @@
   top: 50%;
   left: 50%;
 
-  display: none;
   margin: auto;
 
   background-color: $white;
@@ -14,6 +13,7 @@
   overflow: auto;
   overflow-x: hidden;
   transform: translate(-50%, -50%);
+  transition: transform 0.2s linear;
 }
 
 .Large {
@@ -25,7 +25,9 @@
 .Small {
   width: 95%;
   max-width: 900px;
-  height: 676px;
+  height: 666px;
+
+  overflow: hidden;
 
   @media ($mobile-M) {
     height: 600px;
@@ -36,6 +38,8 @@
   width: 95%;
   max-width: 900px;
   height: 770px;
+
+  overflow: hidden;
 
   @media ($mobile-L) {
     height: 80vh;

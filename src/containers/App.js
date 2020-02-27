@@ -17,6 +17,13 @@ import Footer from "../components/Sections/Footer/Footer";
 
 function App(props) {
   const [call, resume, project] = props.modals;
+  const body = document.getElementsByTagName("body")[0];
+
+  if (call.isOpen || resume.isOpen || project.isOpen) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "auto";
+  }
 
   return (
     <div className={classes.App}>

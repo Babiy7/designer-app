@@ -12,6 +12,8 @@
 
     background-color: $gray;
 
+    overflow: hidden;
+
     @media ($mobile-L) {
       display: none;
     }

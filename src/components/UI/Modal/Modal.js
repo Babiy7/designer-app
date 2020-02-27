@@ -7,8 +7,6 @@ import ButtonClose from "../ButtonClose/ButtonClose";
 const Modal = props => {
   let modal = null;
 
-  console.log(props.unShow);
-
   if (props.size === "lg") {
     modal = [classes.Modal, classes.Large].join(" ");
   } else if (props.size === "md") {
@@ -26,8 +24,7 @@ const Modal = props => {
           width: `${props.width}px`,
           transform: props.show
             ? "translate(-50%, -50%)"
-            : "translateY(-100vh)",
-          display: props.show ? "block" : "none"
+            : "translate(-50%, -200%)"
         }}
       >
         {props.children}
