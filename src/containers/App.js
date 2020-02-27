@@ -16,9 +16,14 @@ import News from "../components/Sections/News/News";
 import Footer from "../components/Sections/Footer/Footer";
 
 function App(props) {
-  console.log("App render");
-
   const [call, resume, project] = props.modals;
+  const body = document.getElementsByTagName("body")[0];
+
+  if (call.isOpen || resume.isOpen || project.isOpen) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "auto";
+  }
 
   return (
     <div className={classes.App}>
