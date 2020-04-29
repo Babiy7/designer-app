@@ -1,0 +1,16 @@
+@import "./vars.scss";
+
+%button-switch-shared {
+  padding: 0;
+
+  outline: none;
+  border: none;
+
+  color: $black;
+  background: none;
+
+  font-size: 14px;
+  line-height: 22px;
+
+  cursor: pointer;
+}

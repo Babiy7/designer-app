@@ -1,0 +1,45 @@
+@import "../../../vars";
+@import "../../../mixins";
+
+.News {
+  margin-top: 220px;
+
+  @media ($tablet) {
+    margin-top: 170px;
+  }
+
+  .Container {
+    width: 100%;
+    max-width: 1171px;
+
+    margin: 0 auto;
+
+    .Header {
+      margin-bottom: 55px;
+
+      text-align: center;
+
+      .Title {
+        color: $black;
+
+        @include fontBase(45px, 700, 45px);
+        text-transform: uppercase;
+      }
+
+      .Text {
+        color: $gray-light;
+
+        @include fontBase(18px, 300, 45px);
+      }
+    }
+
+    .Articles {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media ($mobile-L) {
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../../../vars.scss";
+@import "../../../../mixins.scss";
+
+.Item {
+  color: $black;
+
+  &:first-child {
+    margin-top: 38px;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  .Date {
+    margin-bottom: 12px;
+
+    @include fontBase(14px, 300, 22px);
+    text-decoration: underline;
+  }
+
+  .Subtitle {
+    margin-bottom: 2px;
+
+    @include fontBase(16px, 700, 22px);
+  }
+
+  .Position {
+    margin-bottom: 26px;
+
+    @include fontBase(14px, 300, 22px);
+    font-style: italic;
+  }
+}

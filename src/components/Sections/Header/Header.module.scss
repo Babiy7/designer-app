@@ -1,0 +1,39 @@
+@import "../../../vars.scss";
+@import "../../../mixins.scss";
+
+.Header {
+  padding: 1.2rem 0;
+
+  .Content {
+    width: 100%;
+    max-width: 1200px;
+
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    .HeaderInner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .Nav {
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+
+        @media ($mobile-L) {
+          display: none;
+        }
+      }
+
+      .Button {
+        display: none;
+
+        @media ($mobile-L) {
+          display: block;
+        }
+      }
+    }
+  }
+}

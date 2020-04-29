@@ -1,0 +1,76 @@
+@import "../../../vars";
+@import "../../../mixins";
+
+.Review {
+  position: relative;
+
+  padding: 70px 0;
+  margin-top: 80px;
+
+  background: url("../../../assets/images/review_bg.png") center no-repeat;
+  background-color: $review-bg;
+
+  @media ($mobile-L) {
+    margin-top: 0px;
+  }
+
+  .Item {
+    width: 100%;
+    max-width: 830px;
+
+    margin: 0 auto;
+
+    .Text {
+      color: $white;
+
+      @include fontBase(14px, 300, 32px);
+      text-align: center;
+    }
+
+    .Author {
+      position: absolute;
+      top: 100%;
+
+      text-align: center;
+
+      .Image {
+        width: 103px;
+        height: 103px;
+
+        margin: 0 auto;
+        margin-top: -51px;
+        border: 3px solid $white;
+        border-radius: 50px;
+
+        background: $black;
+      }
+
+      .Name {
+        margin-top: 10px;
+
+        color: $black;
+
+        @include fontBase(16px, 700, 22px);
+      }
+
+      .Company {
+        margin: 7px 0 7px 0;
+
+        color: $gray;
+
+        @include fontBase(14px, 300, 22px);
+        font-style: italic;
+      }
+
+      .Rating {
+        .Star {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  @media ($tablet) {
+    padding: 70px 15px;
+  }
+}
