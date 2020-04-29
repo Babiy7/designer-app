@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./NavLink.module.scss";
 
-const MNavLink = props => {
+const NavLink = props => {
   return (
     <a href={props.link} className={classes.NavLink}>
       {props.children}
@@ -9,4 +9,4 @@ const MNavLink = props => {
   );
 };
 
-export default MNavLink;
+export default NavLink;

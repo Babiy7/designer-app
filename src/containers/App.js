@@ -42,14 +42,14 @@ function App(props) {
   );
 }
 
-const mapStateToProps = state => ({
-  modals: [state.modal.call, state.modal.resume, state.modal.project]
+const mapStateToProps = (state) => ({
+  modals: [state.modal.call, state.modal.resume, state.modal.project],
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   call: () => dispatch({ type: CALL }),
   resume: () => dispatch({ type: RESUME }),
-  project: () => dispatch({ type: PROJECT })
+  project: () => dispatch({ type: PROJECT }),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

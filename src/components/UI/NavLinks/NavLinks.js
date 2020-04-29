@@ -1,5 +1,5 @@
 import React from "react";
-import MNavLink from "./NavLink/NavLink";
+import NavLink from "./NavLink/NavLink";
 
 const NavLinks = props => {
   return [
@@ -9,9 +9,9 @@ const NavLinks = props => {
     { title: "contact", link: "/", active: false }
   ].map(item => {
     return (
-      <MNavLink active={item.active} link={item.link}>
+      <NavLink active={item.active} link={item.link}>
         {item.title}
-      </MNavLink>
+      </NavLink>
     );
   });
 };
